@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>mod_bionic_slider</name>
+    <author>Bionic Laboratories BLG GmbH</author>
+    <creationDate>2025-06</creationDate>
+    <copyright>(C) 2025 Bionic Laboratories BLG GmbH</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>1.1.0</version>
+    <description>Bionic Image Slider - Bildslider fuer Modul-Positionen mit bis zu 5 Bildern</description>
+    <files>
+        <filename module="mod_bionic_slider">mod_bionic_slider.php</filename>
+        <folder>tmpl</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="slider" label="Slider Einstellungen">
+                <field name="slider_position" type="list" label="Ausrichtung" default="center">
+                    <option value="left">Links</option>
+                    <option value="center">Mitte</option>
+                    <option value="right">Rechts</option>
+                </field>
+                <field name="slider_width" type="list" label="Breite" default="100">
+                    <option value="25">25%</option>
+                    <option value="50">50%</option>
+                    <option value="75">75%</option>
+                    <option value="100">100%</option>
+                </field>
+                <field name="slider_height" type="text" label="Hoehe (px)" default="400px" />
+                <field name="slide_interval" type="text" label="Wechselzeit (ms)" default="5000" />
+                <field name="transition_speed" type="text" label="Uebergang (ms)" default="500" />
+                <field name="autoplay" type="radio" label="Autoplay" default="1" class="btn-group">
+                    <option value="1">Ja</option>
+                    <option value="0">Nein</option>
+                </field>
+                <field name="pause_hover" type="radio" label="Pause bei Hover" default="1" class="btn-group">
+                    <option value="1">Ja</option>
+                    <option value="0">Nein</option>
+                </field>
+                <field name="show_nav" type="radio" label="Navigation (Pfeile)" default="1" class="btn-group">
+                    <option value="1">Ja</option>
+                    <option value="0">Nein</option>
+                </field>
+                <field name="show_dots" type="radio" label="Punkte" default="1" class="btn-group">
+                    <option value="1">Ja</option>
+                    <option value="0">Nein</option>
+                </field>
+            </fieldset>
+            
+            <fieldset name="titleset" label="Bildtext">
+                <field name="show_title" type="radio" label="Bildtext anzeigen" default="1" class="btn-group">
+                    <option value="1">Ja</option>
+                    <option value="0">Nein</option>
+                </field>
+                <field name="title_position" type="list" label="Position" default="bottom-left" showon="show_title:1">
+                    <option value="top-left">Oben Links</option>
+                    <option value="top-center">Oben Mitte</option>
+                    <option value="top-right">Oben Rechts</option>
+                    <option value="bottom-left">Unten Links</option>
+                    <option value="bottom-center">Unten Mitte</option>
+                    <option value="bottom-right">Unten Rechts</option>
+                </field>
+            </fieldset>
+            
+            <fieldset name="images" label="Bilder">
+                <field name="image1" type="media" label="Bild 1" />
+                <field name="image1_link" type="url" label="Bild 1 - Link" />
+                <field name="image1_alt" type="text" label="Bild 1 - Alt-Text" />
+                <field name="image1_title" type="text" label="Bild 1 - Bildtext" />
+                
+                <field name="image2" type="media" label="Bild 2" />
+                <field name="image2_link" type="url" label="Bild 2 - Link" />
+                <field name="image2_alt" type="text" label="Bild 2 - Alt-Text" />
+                <field name="image2_title" type="text" label="Bild 2 - Bildtext" />
+                
+                <field name="image3" type="media" label="Bild 3" />
+                <field name="image3_link" type="url" label="Bild 3 - Link" />
+                <field name="image3_alt" type="text" label="Bild 3 - Alt-Text" />
+                <field name="image3_title" type="text" label="Bild 3 - Bildtext" />
+                
+                <field name="image4" type="media" label="Bild 4" />
+                <field name="image4_link" type="url" label="Bild 4 - Link" />
+                <field name="image4_alt" type="text" label="Bild 4 - Alt-Text" />
+                <field name="image4_title" type="text" label="Bild 4 - Bildtext" />
+                
+                <field name="image5" type="media" label="Bild 5" />
+                <field name="image5_link" type="url" label="Bild 5 - Link" />
+                <field name="image5_alt" type="text" label="Bild 5 - Alt-Text" />
+                <field name="image5_title" type="text" label="Bild 5 - Bildtext" />
+            </fieldset>
+            
+            <fieldset name="styling" label="Styling">
+                <field name="border_radius" type="text" label="Eckenradius" default="0px" />
+                <field name="nav_color" type="color" label="Navigation Farbe" default="#ffffff" />
+                <field name="nav_bg" type="color" label="Navigation Hintergrund" default="#000000" />
+                <field name="dot_color" type="color" label="Punkte inaktiv" default="#cccccc" />
+                <field name="dot_active" type="color" label="Punkte aktiv" default="#0066cc" />
+                <field name="title_color" type="color" label="Bildtext Farbe" default="#ffffff" />
+                <field name="title_bg" type="color" label="Bildtext Hintergrund" default="#000000" />
+                <field name="title_opacity" type="list" label="Bildtext Transparenz" default="70">
+                    <option value="0">Transparent</option>
+                    <option value="30">30%</option>
+                    <option value="50">50%</option>
+                    <option value="70">70%</option>
+                    <option value="100">100%</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
